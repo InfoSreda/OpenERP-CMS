@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<menuitem id="cms_mainmenuitem" name="CMS" />
+		<menuitem id="cms_settings" name="Setting" parent="cms_mainmenuitem"/>
+
+		<record id="cms_site_form" model="ir.ui.view">
+			<field name="name">cms.site.form</field>
+			<field name="model">cms.site</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form>
+				  <field name="name"/>
+				  <field name="host"/>
+				  <field name="default_language_id" widget="selection" />
+				</form>
+			</field>
+		</record>
+		
+		<record id="cms_site_tree" model="ir.ui.view">
+			<field name="name">cms.site.tree</field>
+			<field name="model">cms.site</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="host"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="cms_site_action" model="ir.actions.act_window">
+			<field name="name">cms.site.action</field>
+			<field name="res_model">cms.site</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem action="cms_site_action" id="cms_site_menuitem" name="Sites" parent="cms_settings"/>
+
+
+    <record id="cms_template_form" model="ir.ui.view">
+            <field name="name">cms.template.form</field>
+            <field name="model">cms.template</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name"/>
+                    <newline/>
+                    <field name="slot_ids"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="cms_template_tree" model="ir.ui.view">
+            <field name="name">cms.template.tree</field>
+            <field name="model">cms.template</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cms_template_action" model="ir.actions.act_window">
+            <field name="name">cms.template.action</field>
+            <field name="res_model">cms.template</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="cms_template_action" id="cms_template_menuitem" name="Templates" parent="cms_settings"/>
+
+
+        <record id="cms_slot_form" model="ir.ui.view">
+            <field name="name">cms.slot.form</field>
+            <field name="model">cms.slot</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="cms_slot_tree" model="ir.ui.view">
+            <field name="name">cms.slot.tree</field>
+            <field name="model">cms.slot</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cms_slot_action" model="ir.actions.act_window">
+            <field name="name">cms.slot.action</field>
+            <field name="res_model">cms.slot</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="cms_slot_action" id="cms_slot_menuitem" name="Slots" parent="cms_settings"/>
+
+
+        <record id="cms_placeholder_form" model="ir.ui.view">
+            <field name="name">cms.placeholder.form</field>
+            <field name="model">cms.placeholder</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="slot_id" widget="selection"/>
+                    <newline/>
+                    <field name="body" widget="text_html" colspan="4" nolabel="1"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="cms_placeholder_tree" model="ir.ui.view">
+            <field name="name">cms.placeholder.tree</field>
+            <field name="model">cms.placeholder</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="slot_id"/>
+                    <field name="short_body"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="cms_base_placeholders_action" model="ir.actions.act_window">
+            <field name="name">cms.placeholder.action</field>
+            <field name="res_model">cms.placeholder</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('title_id', '=', False)]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="cms_base_placeholders_action" id="cms_placeholders_menuitem" name="Base Placeholders" parent="cms_settings"/>
+
+
+        <record id="cms_page_form" model="ir.ui.view">
+            <field name="name">cms.page.form</field>
+            <field name="model">cms.page</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group colspan="3" col="6">
+                        <field name="site_id" widget="selection"/>
+                        <field name="parent_id"/>
+			<newline/>
+                        <field name="template_id" widget="selection"/>
+                        <field name="publication_date"/>
+                        <field name="publication_end_date" nolabel="1"/>
+                    </group>
+		    <group colspan="1" col="2">
+                        <field name="in_navigation"/>
+                        <field name="published"/>		      
+		    </group>
+		    <notebook colspan="4">
+		      <page string="Titles">
+                            <field name="title_ids" nolabel="1" mode='form'/>
+		      </page>
+		    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record id="cmspage_tree" model="ir.ui.view">
+            <field name="name">cms.page.tree1</field>
+            <field name="model">cms.page</field>
+            <field name="type">tree</field>
+	    <field name="field_parent">child_ids</field>
+            <field name="arch" type="xml">
+                <tree>
+		  <field name="default_title_name" />
+		  <field name="default_title_path" />
+		  <field name="parent_id" invisible="True"/>
+		  <field name="published" />
+		  <field name="in_navigation" />
+		  <field name="sequence"  />
+                </tree>
+            </field>
+        </record>
+
+        <record id="cmspage_tree2" model="ir.ui.view">
+            <field name="name">cms.page.tree2</field>
+            <field name="model">cms.page</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+		  <field name="default_title_name" />
+		  <field name="default_title_path" />
+		  <field name="parent_id" invisible="True"/>
+		  <field name="published" />
+		  <field name="in_navigation" />
+		  <field name="sequence"  />
+                </tree>
+            </field>
+        </record>
+
+       <record id="cmspage_search" model="ir.ui.view">
+            <field name="name">cms.page.search</field>
+            <field name="model">cms.page</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Pages">
+                    <filter icon="terp-check" name="published" string="Published" domain="[('published','=',True)]" separator="1" />
+                    <filter icon="terp-check" string="Navigation" domain="[('in_navigation','=',True)]" separator="1" />
+		    <field name="default_title_name" string="Title"/>
+		    <field name="default_title_path" string="Path"/>
+		    <field name="parent_id" />
+		</search>
+	    </field>
+       </record>
+
+        <record id="cmspage_action" model="ir.actions.act_window">
+            <field name="name">cms.page.action</field>
+            <field name="res_model">cms.page</field>
+            <field name="view_type">tree</field>
+	    <field name="view_id" ref="cmspage_tree"/>
+            <field name="search_view_id" ref="cmspage_search"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem action="cmspage_action" id="cms_page_menuitem_tree" name="Pages (tree)" parent="cms_settings"/>
+
+        <record id="cmspage_action2" model="ir.actions.act_window">
+            <field name="name">cms.page.action2</field>
+            <field name="res_model">cms.page</field>
+            <field name="view_type">form</field>
+	    <field name="view_id" ref="cmspage_tree2"/>
+            <field name="search_view_id" ref="cmspage_search"/>
+            <field name="view_mode">form,tree</field>
+        </record>
+
+        <menuitem action="cmspage_action2" id="cms_page_menuitem_table" name="Pages (table)" parent="cms_settings"/>
+
+        <record id="cms_title_form" model="ir.ui.view">
+            <field name="name">cms.title.form</field>
+            <field name="model">cms.title</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="language_id" widget="selection" />
+                    <field name="slug" />
+                    <field name="title" />
+                    <field name="menu_title" />
+                    <field name="path" />
+                    <field name="old_path" />
+		    <newline />
+		    <separator string="Meta tags" colspan="4"/>
+		    <field name="meta_title" />
+                    <field name="meta_description" />
+                    <field name="meta_keywords" />
+		    <newline />
+		    <separator string="Content" colspan="4"/>
+		    <field name="placeholder_ids" colspan="4" nolabel="1"/>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="cms_title_tree" model="ir.ui.view">
+            <field name="name">cms.title.tree</field>
+            <field name="model">cms.title</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="language_id"/>
+                    <field name="title"/>
+                    <field name="menu_title"/>
+                    <field name="slug"/>
+                    <field name="path"/>
+                    <field name="page_id"/>
+                </tree>
+            </field>
+        </record>
+
+	</data>
+</openerp>

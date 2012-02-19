@@ -1,0 +1,8 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_cms_site_manager","cms.site manager","model_cms_site","base.group_cms_manager",1,1,1,1
+"access_cms_slot_manager","cms.slot manager","model_cms_slot","base.group_cms_manager",1,1,1,1
+"access_cms_template_manager","cms.template manager","model_cms_template","base.group_cms_manager",1,1,1,1
+"access_cms_page_manager","cms.page manager","model_cms_page","base.group_cms_manager",1,1,1,1
+"access_cms_title_manager","cms.title manager","model_cms_title","base.group_cms_manager",1,1,1,1
+"access_cms_placeholder_manager","cms.placeholder manager","model_cms_placeholder","base.group_cms_manager",1,1,1,1
+"access_cms_media_file_manager","cms.media.file manager","model_cms_media_file","base.group_cms_manager",1,1,1,1

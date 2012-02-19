@@ -1,0 +1,496 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* openerp_cms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.0.3\n"
+"Report-Msgid-Bugs-To: support@openerp.com\n"
+"POT-Creation-Date: 2011-11-28 08:39+0000\n"
+"PO-Revision-Date: 2011-11-28 08:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openerp_cms
+#: field:cms.title,page_title:0
+#: field:cms.title,title:0
+msgid "Title"
+msgstr "Title"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_media_file
+msgid "cms.media.file"
+msgstr "cms.media.file"
+
+#. module: openerp_cms
+#: field:cms.media.file,path:0
+msgid "Full path"
+msgstr "Full path"
+
+#. module: openerp_cms
+#: field:cms.page,parent_id:0
+msgid "Parent Page"
+msgstr "Parent Page"
+
+#. module: openerp_cms
+#: field:cms.page,template:0
+#: field:cms.page,template_id:0
+msgid "Template"
+msgstr "Template"
+
+#. module: openerp_cms
+#: field:cms.title,menu_title:0
+msgid "Menu title"
+msgstr "Menu title"
+
+#. module: openerp_cms
+#: field:cms.page,published:0
+msgid "Is published"
+msgstr "Is published"
+
+#. module: openerp_cms
+#: field:cms.placeholder,body:0
+msgid "Body"
+msgstr "Body"
+
+#. module: openerp_cms
+#: selection:cms.page,moderator_state:0
+msgid "app. par."
+msgstr "app. par."
+
+#. module: openerp_cms
+#: view:cms.media.file:0
+msgid "File path"
+msgstr "File path"
+
+#. module: openerp_cms
+#: field:cms.page,in_navigation:0
+msgid "In navigation"
+msgstr "In navigation"
+
+#. module: openerp_cms
+#: field:cms.media.file,name:0
+msgid "Folder name"
+msgstr "Folder name"
+
+#. module: openerp_cms
+#: field:cms.title,path:0
+msgid "Path"
+msgstr "Path"
+
+#. module: openerp_cms
+#: view:cms.media.file:0
+msgid "Image info"
+msgstr "Image info"
+
+#. module: openerp_cms
+#: field:cms.title,slug:0
+msgid "Slug"
+msgstr "Slug"
+
+#. module: openerp_cms
+#: field:cms.page,level:0
+msgid "Level"
+msgstr "Level"
+
+#. module: openerp_cms
+#: model:ir.actions.act_window,name:openerp_cms.cms_slot_action
+msgid "cms.slot.action"
+msgstr "cms.slot.action"
+
+#. module: openerp_cms
+#: field:cms.page,moderator_state:0
+msgid "Moderator state"
+msgstr "Moderator state"
+
+#. module: openerp_cms
+#: model:ir.actions.act_window,name:openerp_cms.cms_template_action
+msgid "cms.template.action"
+msgstr "cms.template.action"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_template
+msgid "CMS Template"
+msgstr "CMS Template"
+
+#. module: openerp_cms
+#: selection:cms.page,limit_visibility_in_menu:0
+msgid "for logged in users only"
+msgstr "for logged in users only"
+
+#. module: openerp_cms
+#: field:cms.title,application_urls:0
+msgid "Application"
+msgstr "Application"
+
+#. module: openerp_cms
+#: model:ir.ui.menu,name:openerp_cms.cms_settings
+msgid "Setting"
+msgstr "Setting"
+
+#. module: openerp_cms
+#: constraint:cms.title:0
+msgid "Error ! You cannot create CMS Title not unique path."
+msgstr "Error ! You cannot create CMS Title not unique path."
+
+#. module: openerp_cms
+#: field:cms.page,publisher_public_id:0
+msgid "Publisher draft"
+msgstr "Publisher draft"
+
+#. module: openerp_cms
+#: field:cms.title,placeholder_ids:0
+msgid "Placeholders"
+msgstr "Placeholders"
+
+#. module: openerp_cms
+#: model:ir.module.module,description:openerp_cms.module_meta_information
+msgid "OpenERP CMS"
+msgstr "OpenERP CMS"
+
+#. module: openerp_cms
+#: model:ir.ui.menu,name:openerp_cms.cms_mainmenuitem
+msgid "CMS"
+msgstr "CMS"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_slot
+msgid "CMS Slot"
+msgstr "CMS Slot"
+
+#. module: openerp_cms
+#: constraint:cms.title:0
+msgid "Error ! You cannot create CMS Title."
+msgstr "Error ! You cannot create CMS Title."
+
+#. module: openerp_cms
+#: view:cms.media.file:0
+msgid "Child files"
+msgstr "Child files"
+
+#. module: openerp_cms
+#: field:cms.media.file,child_ids:0
+msgid "Files"
+msgstr "Files"
+
+#. module: openerp_cms
+#: view:cms.page:0
+msgid "Published"
+msgstr "Published"
+
+#. module: openerp_cms
+#: field:cms.site,domain:0
+msgid "Domain"
+msgstr "Domain"
+
+#. module: openerp_cms
+#: view:cms.media.file:0
+msgid "Image"
+msgstr "Image"
+
+#. module: openerp_cms
+#: selection:cms.page,moderator_state:0
+msgid "changed"
+msgstr "changed"
+
+#. module: openerp_cms
+#: view:cms.page:0
+#: field:cms.page,title_ids:0
+msgid "Titles"
+msgstr "Titles"
+
+#. module: openerp_cms
+#: model:ir.module.module,shortdesc:openerp_cms.module_meta_information
+msgid "openerp cms"
+msgstr "openerp cms"
+
+#. module: openerp_cms
+#: field:cms.placeholder,slot:0
+#: field:cms.placeholder,slot_id:0
+msgid "Slot"
+msgstr "Slot"
+
+#. module: openerp_cms
+#: field:cms.media.file,comment:0
+msgid "Сommentary"
+msgstr "Сommentary"
+
+#. module: openerp_cms
+#: view:cms.media.file:0
+msgid "Commentary"
+msgstr "Commentary"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_site
+msgid "CMS Site"
+msgstr "CMS Site"
+
+#. module: openerp_cms
+#: field:cms.media.file,is_folder:0
+msgid "Is folder"
+msgstr "Is folder"
+
+#. module: openerp_cms
+#: field:cms.page,navigation_extenders:0
+msgid "Attached menu"
+msgstr "Attached menu"
+
+#. module: openerp_cms
+#: constraint:cms.title:0
+msgid "Error ! You cannot create CMS Title incorrect slug."
+msgstr "Error ! You cannot create CMS Title incorrect slug."
+
+#. module: openerp_cms
+#: field:cms.page,login_required:0
+msgid "Login required"
+msgstr "Login required"
+
+#. module: openerp_cms
+#: field:cms.placeholder,title_id:0
+#: field:cms.title,page_sequence:0
+#: field:cms.title,template_name:0
+msgid "unknown"
+msgstr "unknown"
+
+#. module: openerp_cms
+#: field:cms.title,page_id:0
+msgid "Page"
+msgstr "Page"
+
+#. module: openerp_cms
+#: field:cms.site,default_language:0
+msgid "Default language"
+msgstr "Default language"
+
+#. module: openerp_cms
+#: model:ir.actions.act_window,name:openerp_cms.cmspage_action
+msgid "cms.page.action"
+msgstr "cms.page.action"
+
+#. module: openerp_cms
+#: field:cms.page,soft_root:0
+msgid "Soft root"
+msgstr "Soft root"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_title
+msgid "CMS Title"
+msgstr "CMS Title"
+
+#. module: openerp_cms
+#: field:cms.title,language:0
+msgid "Language"
+msgstr "Language"
+
+#. module: openerp_cms
+#: field:cms.page,publication_end_date:0
+msgid "Publication end date"
+msgstr "Publication end date"
+
+#. module: openerp_cms
+#: model:ir.actions.act_window,name:openerp_cms.cms_site_action
+msgid "cms.site.action"
+msgstr "cms.site.action"
+
+#. module: openerp_cms
+#: constraint:cms.page:0
+msgid "Error ! You cannot create recursive CMS Page."
+msgstr "Error ! You cannot create recursive CMS Page."
+
+#. module: openerp_cms
+#: field:cms.page,reverse_id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: openerp_cms
+#: field:cms.page,parent_left:0
+msgid "Parent Left"
+msgstr "Parent Left"
+
+#. module: openerp_cms
+#: selection:cms.page,publisher_state:0
+msgid "default"
+msgstr "default"
+
+#. module: openerp_cms
+#: field:cms.media.file,data:0
+msgid "Data"
+msgstr "Data"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_placeholder
+msgid "CMS Placeholder"
+msgstr "CMS Placeholder"
+
+#. module: openerp_cms
+#: field:cms.page,publisher_state:0
+msgid "Publisher state"
+msgstr "Publisher state"
+
+#. module: openerp_cms
+#: model:ir.actions.act_window,name:openerp_cms.cms_media_file_action
+msgid "cms.media.file.action"
+msgstr "cms.media.file.action"
+
+#. module: openerp_cms
+#: selection:cms.page,publisher_state:0
+msgid "dirty"
+msgstr "dirty"
+
+#. module: openerp_cms
+#: field:cms.title,meta_keywords:0
+msgid "Keywords"
+msgstr "Keywords"
+
+#. module: openerp_cms
+#: selection:cms.page,moderator_state:0
+msgid "req. app."
+msgstr "req. app."
+
+#. module: openerp_cms
+#: selection:cms.page,moderator_state:0
+#: selection:cms.page,publisher_state:0
+msgid "delete"
+msgstr "delete"
+
+#. module: openerp_cms
+#: field:cms.title,redirect:0
+msgid "Redirect"
+msgstr "Redirect"
+
+#. module: openerp_cms
+#: field:cms.page,default_title_name:0
+msgid "Default title"
+msgstr "Default title"
+
+#. module: openerp_cms
+#: model:ir.ui.menu,name:openerp_cms.cms_media_file_menuitem
+msgid "Media"
+msgstr "Media"
+
+#. module: openerp_cms
+#: model:ir.ui.menu,name:openerp_cms.cms_site_menuitem
+msgid "Sites"
+msgstr "Sites"
+
+#. module: openerp_cms
+#: view:cms.title:0
+msgid "Content"
+msgstr "Content"
+
+#. module: openerp_cms
+#: field:cms.page,child_ids:0
+msgid "Child Pages"
+msgstr "Child Pages"
+
+#. module: openerp_cms
+#: field:cms.page,publisher_is_draft:0
+msgid "Publisher is draft"
+msgstr "Publisher is draft"
+
+#. module: openerp_cms
+#: selection:cms.page,limit_visibility_in_menu:0
+msgid "for anonymous users only"
+msgstr "for anonymous users only"
+
+#. module: openerp_cms
+#: field:cms.media.file,parent_id:0
+msgid "Folder"
+msgstr "Folder"
+
+#. module: openerp_cms
+#: field:cms.slot,template_ids:0
+#: model:ir.ui.menu,name:openerp_cms.cms_template_menuitem
+msgid "Templates"
+msgstr "Templates"
+
+#. module: openerp_cms
+#: field:cms.placeholder,short_body:0
+msgid "Short Body"
+msgstr "Short Body"
+
+#. module: openerp_cms
+#: field:cms.title,meta_description:0
+msgid "Description"
+msgstr "Description"
+
+#. module: openerp_cms
+#: field:cms.page,parent_right:0
+msgid "Parent Right"
+msgstr "Parent Right"
+
+#. module: openerp_cms
+#: field:cms.page,limit_visibility_in_menu:0
+msgid "menu visibility"
+msgstr "menu visibility"
+
+#. module: openerp_cms
+#: view:cms.page:0
+#: model:ir.ui.menu,name:openerp_cms.cms_page_menuitem
+msgid "Pages"
+msgstr "Pages"
+
+#. module: openerp_cms
+#: code:addons/openerp_cms/cms.py:15
+#: field:cms.site,name:0
+#: field:cms.slot,name:0
+#: field:cms.template,name:0
+#, python-format
+msgid "Name"
+msgstr "Name"
+
+#. module: openerp_cms
+#: field:cms.media.file,url:0
+msgid "Url"
+msgstr "Url"
+
+#. module: openerp_cms
+#: field:cms.title,has_url_overwrite:0
+msgid "Has url overwrite"
+msgstr "Has url overwrite"
+
+#. module: openerp_cms
+#: selection:cms.page,moderator_state:0
+msgid "approved"
+msgstr "approved"
+
+#. module: openerp_cms
+#: field:cms.page,tree_id:0
+msgid "Tree ID"
+msgstr "Tree ID"
+
+#. module: openerp_cms
+#: field:cms.page,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: openerp_cms
+#: field:cms.page,default_path_name:0
+msgid "Default path"
+msgstr "Default path"
+
+#. module: openerp_cms
+#: field:cms.page,site:0
+msgid "Site"
+msgstr "Site"
+
+#. module: openerp_cms
+#: field:cms.template,slot_ids:0
+#: model:ir.ui.menu,name:openerp_cms.cms_slot_menuitem
+msgid "Slots"
+msgstr "Slots"
+
+#. module: openerp_cms
+#: model:ir.model,name:openerp_cms.model_cms_page
+msgid "CMS Page"
+msgstr "CMS Page"
+
+#. module: openerp_cms
+#: field:cms.page,publication_date:0
+msgid "Publication date"
+msgstr "Publication date"
+
