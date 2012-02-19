@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<openerp>
-	<data noupdate="0">
-		<record id="base.group_cms_manager" model="res.groups">
-			<field name="name">CMS / Manager</field>
-		</record>
-	</data>
-</openerp>
