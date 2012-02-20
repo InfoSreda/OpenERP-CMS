@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-		<menuitem id="cms_mainmenuitem" name="CMS" />
+		<menuitem id="cms_mainmenuitem" name="CMS" web_icon="images/cms.png" web_icon_hover="images/cms-hover.png"/>
 		<menuitem id="cms_settings" name="Setting" parent="cms_mainmenuitem"/>
 
 		<record id="cms_site_form" model="ir.ui.view">
