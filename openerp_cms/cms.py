@@ -25,7 +25,7 @@ import re
 from osv import osv
 from osv import fields
 from lxml import html
-    
+
 class cms_site(osv.osv):
     _name = 'cms.site'
     _description = 'CMS Site'
@@ -34,11 +34,25 @@ class cms_site(osv.osv):
     _columns = {
         'name': fields.char("Name", size=50, required=True),
         'host': fields.char("Host", size=100, select=1, required=True),
+        'host_ids': fields.many2many('cms.host', 'cms_site_host_rel','host_id' ,'site_id', 'Hosts'),
         'default_language_id': fields.many2one('res.lang',
-                                       string='Default language', required=True)
-    }
+                                               string='Default language', required=True)
+        }
 
 cms_site()
+    
+class cms_host(osv.osv):
+    _name = 'cms.host'
+    _description = 'CMS Host'
+    _order = 'hostname'
+    
+    _columns = {
+        'hostname': fields.char("Host", size=100, select=1, required=True),
+#        ''
+    }
+        
+cms_host()       
+
 
 class cms_slot(osv.osv):
     _name = 'cms.slot'
@@ -78,7 +92,7 @@ class cms_page(osv.osv):
                                              string='Default path',
                                              type='char'),
 
-        'parent_id': fields.many2one('cms.page', 'Parent Page', select=1),
+        'parent_id': fields.many2one('cms.page', 'Parent Page', select=1, help='Parent page. Should be empty for main page of the site'),
         'child_ids': fields.one2many('cms.page', 'parent_id', 'Child Pages'),
         'publication_date': fields.date('Publication date'),
         'publication_end_date': fields.date('Publication end date'),
@@ -106,8 +120,8 @@ class cms_page(osv.osv):
     _defaults = {
         'site_id': _get_first('cms.site'),
         'template_id': _get_first('cms.template'),
-        'in_navigation': lambda *a: True,
-        'published': lambda *a: True,
+        'in_navigation': lambda *a: False,
+        'published': lambda *a: False,
         #'sequence': lambda *a: 1000
     }
 

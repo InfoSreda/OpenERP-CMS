@@ -22,12 +22,12 @@
 ##############################################################################
 
 {
-    'name': 'openerp cms',
-    'version': '0.2.0',
+    'name': 'OpenERP CMS',
+    'version': '0.3.0',
     'category': 'Others',
     'description': """OpenERP CMS""",
     'author': 'Infosreda LLC',
-    'website': 'http://infosreda.com/',
+    'website': 'http://www.infosreda.com/',
     'depends': ['base', 'web'],
     'init_xml': [],
     'update_xml': [

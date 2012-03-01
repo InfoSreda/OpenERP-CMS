@@ -3,7 +3,6 @@
 ##############################################################################
 #
 #    Authors: Boris Timokhin, Peter A. Kurishev
-#    Participants: Alexey Samoukin, Dmitry Zhuravlev-Nevsky
 #    Copyright (C) 2011 - 2012 by InfoSreda LLC
 #
 #    This program is free software: you can redistribute it and/or modify
