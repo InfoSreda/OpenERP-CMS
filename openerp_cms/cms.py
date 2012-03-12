@@ -33,7 +33,7 @@ class cms_site(osv.osv):
 
     _columns = {
         'name': fields.char("Name", size=50, required=True),
-        'host': fields.char("Host", size=100, select=1, required=True),
+#        'host': fields.char("Host", size=100, select=1, required=True),
         'host_ids': fields.many2many('cms.host', 'cms_site_host_rel','host_id' ,'site_id', 'Hosts'),
         'default_language_id': fields.many2one('res.lang',
                                                string='Default language', required=True)
@@ -48,7 +48,6 @@ class cms_host(osv.osv):
     
     _columns = {
         'hostname': fields.char("Host", size=100, select=1, required=True),
-#        ''
     }
         
 cms_host()       
